@@ -4,7 +4,7 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-
+  app.enableCors()
   const options = new DocumentBuilder()
     .setTitle('视频网站后端api')
     .setDescription('供管理后台使用的api')
