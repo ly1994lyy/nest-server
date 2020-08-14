@@ -20,6 +20,7 @@ export class CoursesController {
         return {
             title: '课程管理',
             searchMenuSpan: 8,
+            align:"center",
             column: [
                 {
                     label: '课程名称',
@@ -35,7 +36,7 @@ export class CoursesController {
                     type: 'upload',
                     listType: 'picture-img',
                     row: true,
-                    action:'/upload'
+                    action: '/upload',
                 },
             ],
         };

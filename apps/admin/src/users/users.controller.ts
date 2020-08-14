@@ -16,6 +16,7 @@ export class UsersController {
     option() {
         return {
             title: '用户管理',
+            align: "center",
             column: [
                 {
                     label: '用户名',
