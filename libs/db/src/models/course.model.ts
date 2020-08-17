@@ -4,7 +4,8 @@ import { Episode } from './episode.model'
 
 @modelOptions({
     schemaOptions:{
-        timestamps:true
+        timestamps: true,
+        toJSON:{virtuals:true}
     }
 })
 export class Course {
@@ -16,6 +17,10 @@ export class Course {
     @Prop()
     cover:string
 
-    @arrayProp({ref:'episode'})
+    @arrayProp({
+        ref: 'Episode',
+        localField: '_id',
+        foreignField: 'course',
+    })
     episodes:Ref<Episode>[]
 }

@@ -7,8 +7,8 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.enableCors()
   const options = new DocumentBuilder()
-    .setTitle('视频网站后端api')
-    .setDescription('供管理后台使用的api')
+    .setTitle('视频网站前端&&小程序api')
+    .setDescription('供客户端使用的api')
     .setVersion('1.0')
     .addTag('users')
     .build();
